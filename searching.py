@@ -68,10 +68,11 @@ def run_ga():
 
     x1, x2 = decode_chromosome(best_solution)
     final_value = - (math.sin(x1) * math.cos(x2) * math.tan(x1 + x2) + 0.75 * math.exp(1 - math.sqrt(x1**2)))
-    print("Case Based Searching (NIM 1302220085 - 1302220109)")
+    print("\nCase Based Searching (NIM 1302220085 - 1302220109)")
     print("\nBest Chromosome:", best_solution)
     print("Nilai x1 =", x1)
     print("Nilai x2 =", x2)
+    print("\n Data Tambahan:")
     print("Nilai f(x1,x2) =", final_value)
     print("Fitness akhir =", fitness(best_solution))
 
