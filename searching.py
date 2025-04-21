@@ -2,12 +2,12 @@ import random
 import math
 
 POP_SIZE = 20
-CHROM_LENGTH = 20
+BIT_LENGTH = 10
+CHROM_LENGTH = 2 * BIT_LENGTH
 GEN_MAX = 50
 X_MIN, X_MAX = -10, 10
 CROSSOVER_RATE = 0.8
 MUTATION_RATE = 0.01
-BIT_LENGTH = 10
 
 def decode_gene(gene):
     decimal = int(gene, 2)
@@ -68,11 +68,10 @@ def run_ga():
 
     x1, x2 = decode_chromosome(best_solution)
     final_value = - (math.sin(x1) * math.cos(x2) * math.tan(x1 + x2) + 0.75 * math.exp(1 - math.sqrt(x1**2)))
-    print("\nCase Based Searching (NIM 1302220085 - 1302220109)")
+    print("Case Based Searching (NIM 1302220085 - 1302220109)")
     print("\nBest Chromosome:", best_solution)
     print("Nilai x1 =", x1)
     print("Nilai x2 =", x2)
-    print("\n Data Tambahan:")
     print("Nilai f(x1,x2) =", final_value)
     print("Fitness akhir =", fitness(best_solution))
 
